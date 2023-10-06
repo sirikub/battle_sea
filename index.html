@@ -6,52 +6,73 @@
     <title>Sea Battle</title>  
 </head>
 <body>
-    <div class="fieldComputer">
-        <span id="playingFieldLeft"></span>
-        <span id="playingFieldUp"></span>        
-        <div id="playingField"></div>        
+    <div class="games">
+        <div class="field computer">
+            <span class="playingFieldLeft computer"></span>
+            <span class="playingFieldUp computer"></span>        
+            <div class="playingField computerField"></div>        
+        </div>
+        <div class="field myField">
+            <span class="playingFieldLeft myField"></span>
+            <span class="playingFieldUp myField"></span>        
+            <div class="playingField myField"></div>        
+        </div>
     </div>
-    <!-- <div class="fieldMy">
-        <span class="playingFieldLeft"></span>
-        <span class="playingFieldUp"></span>        
-        <div id="playingField"></div>        
-    </div> -->
     <script src="/app.js" defer></script>
 </body>
 </html>
 
 <style>
-#playingField{
+.games {    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 530px;
+}
+.field {
+    width: 240px;
+    height: 235px;
+}
+.field.myField {
+    float: left;
+    padding: 0 0 0 50px;
+}
+.field.computer {
+    float: left;
+}
+.playingField {
     width: 200px; 
     height: 200px;
     border: 2px solid #000000;
     margin: 0px 0px 0px 25px;
 }
-span.field {
+.fieldChild {
     width: 20px;
     height: 20px;      
     float: left;
     outline: 1px solid #000000; 
 } 
-span.field:hover {
+.fieldChild:hover {
     outline: 2px solid #000000;
 } 
-span.playingFieldUp {
+.playingFieldUpChild {
     display: inline-block;
     width: 20.3px;
+    height: 20px;
     text-align: center;
 }
-span.playingFieldLeft {
+.playingFieldLeftChild {
     width: 20px;
     text-align: center;
     height: 20.3px;
 }
-#playingFieldLeft {
+.playingFieldLeft {
     position: absolute;
     display: grid;
     margin: 20px 0px 0px 0px;
 }
-#playingFieldUp{
+.playingFieldUp{
     margin: 0px 0px 0px 25px;
 }
 </style> 

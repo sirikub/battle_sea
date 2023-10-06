@@ -6,12 +6,27 @@
     <title>Sea Battle</title>  
 </head>
 <body>
-    <div id="playingField" style="width: 200px; height: 200px;border: 2px solid #000000"></div>
+    <div class="fieldComputer">
+        <span id="playingFieldLeft"></span>
+        <span id="playingFieldUp"></span>        
+        <div id="playingField"></div>        
+    </div>
+    <!-- <div class="fieldMy">
+        <span class="playingFieldLeft"></span>
+        <span class="playingFieldUp"></span>        
+        <div id="playingField"></div>        
+    </div> -->
     <script src="/app.js" defer></script>
 </body>
 </html>
 
 <style>
+#playingField{
+    width: 200px; 
+    height: 200px;
+    border: 2px solid #000000;
+    margin: 0px 0px 0px 25px;
+}
 span.field {
     width: 20px;
     height: 20px;      
@@ -21,4 +36,22 @@ span.field {
 span.field:hover {
     outline: 2px solid #000000;
 } 
+span.playingFieldUp {
+    display: inline-block;
+    width: 20.3px;
+    text-align: center;
+}
+span.playingFieldLeft {
+    width: 20px;
+    text-align: center;
+    height: 20.3px;
+}
+#playingFieldLeft {
+    position: absolute;
+    display: grid;
+    margin: 20px 0px 0px 0px;
+}
+#playingFieldUp{
+    margin: 0px 0px 0px 25px;
+}
 </style> 

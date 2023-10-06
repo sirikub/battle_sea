@@ -2,11 +2,7 @@
 function renderField(className){
     function createDiv(num){       
         const div = document.createElement('span');    
-        div.className = `field child${num}`  
-        // div.style.width  = '20px'
-        // div.style.height = '20px'       
-        // div.style.float = 'left'
-        // div.style.outline = '1px solid #000000'        
+        div.className = `field child${num}`          
         return div
       }
       
@@ -18,4 +14,15 @@ function renderField(className){
 
 renderField('playingField')
 
+
+const arrayFieldUp = ['A','Б','В','Г','Е','Д','Ж','З','И','К'] 
+const arrayFieldLeft = [1,2,3,4,5,6,7,8,9,10] 
+
+document.getElementById('playingFieldUp').innerHTML = renderText(arrayFieldUp, 'playingFieldUp')
+document.getElementById('playingFieldLeft').innerHTML = renderText(arrayFieldLeft, 'playingFieldLeft')
+
+function renderText(array, className){    
+    return array.map((elem, index) => {
+      return `<span class="${className} child${index}">${elem}</span>`}).join('')
+}
 
